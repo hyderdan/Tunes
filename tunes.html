@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="tunes.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
+    <script src="https://kit.fontawesome.com/7279bb6a41.js" crossorigin="anonymous"></script>
+    <script src="s1.js"> </script>
+      
+
+</head>
+<body>
+ 
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+    <div class="contain">
+        
+        <div class="contain2">
+        <h4 class="display-1 "> TUNES <i class="fa-brands fa-spotify"></i></h4>
+        </div> 
+
+          <div class="offcanvas offcanvas-end " id="demo">
+            <div class="offcanvas-header">
+              <h1 class="offcanvas-title">MENU</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul>
+                <li><a class="dropdown-item" href="#">Home</a></li>
+                <li><a class="dropdown-item" href="#">Trending Now</a></li>
+                <li><a class="dropdown-item" href="#">Old Songs</a></li>
+                <li><a class="dropdown-item" href="#">New Songs</a></li>
+                <li><a class="dropdown-item" href="#">Downloads</a></li>
+                <li><a class="dropdown-item" href="#">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Contact</a></li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
+                <li><a class="dropdown-item" href="#">Support</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="container-fluid mt-3">
+            <button class="btn  menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+
+
+       
+      <div class="quote">
+        <h4 class="display-6">“Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything.” – Plato </h4>
+      </div> 
+   
+          <div class="playing">
+            <div class="imgh5">
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/329/444/desktop-wallpaper-parava-movie-parava-thumbnail.jpg"
+                 class="img-thumbnail img1" >
+                 <a href="#"> <h5>Pakalin Vaathil</h5> </a>
+                 <a href="#"> <h6><u>Sreenath Bhasi</u></h6> </a>
+            </div>
+
+            <div class="audio">
+              
+              <input type="range" value="0" id="progress">
+            </div>
+           <div class="icon">
+            <i class="fa-solid fa-circle-play" id="img"></i>
+          </div>
+           
+              <div class="play2">
+                <i class="fa-solid fa-forward-step" id="img2"></i>
+            </div>
+            <div class="play3">
+              <i class="fa-solid fa-backward-step"></i>
+            </div>
+          </div>  
+          <div>
+            <audio   id="Song"><source src="parava.mp3" type="audio/mp3"></audio>
+            
+          </div>
+
+          <script>
+           let mySong = document.getElementById("Song")
+           let img = document.getElementById("img")
+           let img2= document.getElementById("img2")
+          
+let cnt=1
+           img.onclick = function(){
+             
+            if(cnt%2!=0)
+            mySong.play()
+          else
+            mySong.pause()
+          cnt++;
+            
+           }
+           img2.onclick = function(){
+            
+            
+            
+           }
+          </script>
+
+        </div>
+       
+     <div class="section">
+       
+
+        <nav class="navbar navbar-expand-lg bg-body- navbar">
+          <div class="container bg-">
+            <a class="navbar-brand" href="#">All</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Trending Now</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Moods&Genre
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ">Old Songs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New Songs</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Podcast</a>
+                  </li>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+           
+            <div class="swiper-slide"><img src="img1.webp" style="width: 610px; border-radius: 10px; ">
+            </div>
+            <div class="swiper-slide"><img src="BANNER_2.webp" style="width: 610px; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="BANNER_3.webp" style="width: 610px; border-radius: 10px;"></div>
+            <div class="swiper-slide"><img src="BANNER_4.webp" style="width: 610px; border-radius: 10px;"></div>
+            
+            <div class="swiper-slide"><img src="BANNER_5.webp" style="width: 610px; border-radius: 10px;"></div>
+            
+            <div class="swiper-slide"><img src="BANNER_6.webp" style="width: 610px; border-radius: 10px;"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>  
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+      <script>
+        
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: "auto",
+          Slides: true,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+
+        </div>
+       
+
+        <section class="artist">
+          <div class="h3" >
+           <h3><b>Recently Played</b></h3>
+           <h5><a  href="#">Show More</a></h5>
+          
+          </div>
+          <div class="card cardsub">
+            <img class="card-img-top" src="artist8.jpeg" alt="Card image" >
+            <div class="card-body">
+              <h6 class="card-title">&nbsp; Pakalin Vathil</h6>
+            </div>
+
+            <div class="card card2" id="cardsub2">
+              <img class="card-img-top" src="artist9.jpeg" alt="Card image" >
+              <div class="card-body body2">
+                <h6 class="card-title">PakalRavukal-Kurup</h6>
+              </div>
+
+              <div class="card card3" id="cardsub3">
+                <img class="card-img-top" src="artist10.jpeg" alt="Card image" >
+                <div class="card-body body3">
+                  <h6 class="card-title">&nbsp;&nbsp;Senthoora-Bogan</h6>
+                </div>
+
+                <div class="card card4" id="cardsub4">
+                  <img class="card-img-top" src="artist11.jpeg" alt="Card image" >
+                  <div class="card-body body3">
+                    <h6 class="card-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bachelor Party</h6>
+                  </div>
+
+                  <div class="card card5" id="cardsub5">
+                    <img class="card-img-top" src="artist12.jpeg" alt="Card image" >
+                    <div class="card-body body3">
+                      <h6 class="card-title">&nbsp;&nbsp;&nbsp;Manavalan Thugs</h6>
+                    </div>
+
+                    <div class="card card6" id="cardsub6">
+                      <img class="card-img-top" src="artist13.jpeg" alt="Card image" >
+                      <div class="card-body body3">
+                        <h6 class="card-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ustad Hotel</h6>
+                      </div>
+        </section>
+
+
+
+        <section class="artist artist2">
+          <div class="h3" >
+           <h3><b>Best Of Artist</b></h3>
+           
+          </div>
+          <div class="card cardsub">
+            <img class="card-img-top" src="artist3.jpeg" alt="Card image" >
+            <div class="card-body">
+              <h6 class="card-title"> Hiphop Tamizha</h6>
+            </div>
+
+            <div class="card card2" id="cardsub2">
+              <img class="card-img-top" src="artist2.jpg" alt="Card image" >
+              <div class="card-body body2">
+                <h6 class="card-title">Anirudh Ravichander</h6>
+              </div>
+
+              <div class="card card3" id="cardsub3">
+                <img class="card-img-top" src="artist4.jpeg" alt="Card image" >
+                <div class="card-body body3">
+                  <h6 class="card-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arjith Singh</h6>
+                </div>
+
+                <div class="card card4" id="cardsub4">
+                  <img class="card-img-top" src="artist5.jpg" alt="Card image" >
+                  <div class="card-body body3">
+                    <h6 class="card-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eminem</h6>
+                  </div>
+
+                  <div class="card card5" id="cardsub5">
+                    <img class="card-img-top" src="artist6.jpg" alt="Card image" >
+                    <div class="card-body body3">
+                      <h6 class="card-title">&nbsp;&nbsp;&nbsp;&nbsp;XXXTENTACION</h6>
+                    </div>
+
+                    <div class="card card6" id="cardsub6">
+                      <img class="card-img-top" src="artist7.jpeg" alt="Card image" >
+                      <div class="card-body body3">
+                        <h6 class="card-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sushin Shyam</h6>
+                      </div>
+
+                      <div class="card card7 ">
+                        <img class="card-img-top" src="artist14.jpeg" alt="Card image" >
+                        <div class="card-body body3">
+                          <h6 class="card-title"> Vineeth Sreenivasan</h6>
+                        </div>
+
+                        <div class="card card8 ">
+                          <img class="card-img-top" src="artist15.jpeg" alt="Card image" >
+                          <div class="card-body body3">
+                            <h6 class="card-title"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shaan Rahman</h6>
+                          </div>
+      
+                        </section>
+                        <footer  style="background-color:rgb(29, 28, 28);height: 1000px;">
+                          <div class="footer1">
+                            <h3  class="hhh"  >Best way to Listen to Music!</h3>
+                              <h4  class="hhh"  >Don’t forget to install Wynk Music on your mobile phones</h4>
+                          </div>
+                          <div class="footer2">
+                           <h4 style="font-size: 20px;">LATEST SONGS
+                           </h4>
+                           <a  class="aaa" href="#"><p style="font-size: 13px;">
+                              Sun Sajni (From "Satyaprem Ki Katha") |<br>
+                              Barsaat Aa Gayi  | Pehli Baarish Mein |<br>
+                              Gujju Pataka (From "Satyaprem Ki Katha") <br> 
+                              Tum Se Milke (From "Tiku Weds Sheru") <br> 
+                              Shehnaiyon Ki Awaaz  |  Mohabbat  <br>
+                              Aaj Ke Baad (From "Satyaprem Ki Katha") <br> 
+                              Tera Saath  |  Hai Tu (From "I Love You") <br> 
+                              Kehde Kehde Haan | sayyāh  |
+                             
+                            </p></a>
+                          </div>
+                          <div class="footer3">
+                            <h4 style="font-size: 20px;">REGIONAL SONGS
+                            </h4>
+                            <a  class="aaa" href="#"><p style="font-size: 13px;">
+                              New Bengali Songs  |  New Bhojpuri Songs <br> 
+                              New English Songs  |  New Haryanvi Songs  <br>
+                              New Hindi Songs  | New Rajasthani Songs <br>
+                              New Kannada Songs  |  New Marathi Songs  <br>
+                              New Punjabi Songs  |  New Tamil Songs  <br>
+                              New Telugu Songs  |  New Odia Songs  <br> 
+                              New Gujarati Songs  |  New Assamese Songs<br>
+                             </p></a>
+                           </div> 
+                           <div class="footer4">
+                            <h4 style="font-size: 20px;">TRENDING SONGS
+                            </h4>
+                            <a   class="aaa" href="#"><p style="font-size: 13px;">
+                              Tere Vaaste (From "Zara Hatke Zara Bachke")  |<br>
+                              Phir Aur Kya Chahiye (From "Zara Hatke Zara Bachke")  <br>
+                              Zihaal e Miskin  |  Kya Loge Tum  |  Apna Bana Le  |<br>
+                              Na Roja Nuvve  |  Ram Siya Ram (From "Adipurush")  |<br>
+                              Kesariya (From "Brahmastra")  | <br>
+                              O Bedardeya (From "Tu Jhoothi Main Makkaar") <br>
+                              Obsessed  |Calm Down  |  Maan Meri Jaan  <br>
+                              Kehti Hain  |Calm Down  |  Maan Meri Jaan <br> 
+                              Kehti HainCalm Down  |  Maan Meri Jaan <br>
+                              Nijame Ne Chebutunna  |  Raataan Lambiyan<br>
+                             </p></a>
+                           </div>
+                           <div class="footer5">
+                            <h4 style="font-size: 20px;">TOP ARTIST
+                            </h4>
+                            <a  class="aaa" href="#"><p style="font-size: 13px;">
+                              Guru Randhawa  |  Arijit Singh  |<br>
+                              Atif Aslam  |  Justin Bieber  |  Gulzar  |<br>
+                              Armaan Malik  |  Sidhu Moose Wala  |  Alan Walker  |<br>
+                              Udit Narayan  |  Sonu Nigam  |  Sid Sriram  |  Akhil  |<br>
+                              Darshan Raval  |  Shreya Ghoshal  |  Alka Yagnik<br>
+                             </p></a>
+                           </div>
+                           <div class="footer6">
+                            <h4 style="font-size: 20px;">TRENDING ALBUM
+                            </h4>
+                             <a   class="aaa" href="#"><p style="font-size: 13px;">
+                              
+                               Adipurush  |  Vikram Original Motion Picture <br>
+                               SoundtrackShubh Vivah  |  Thallumaala  |<br>
+                               Pushpa - The Rise  |  Ninna Sanihake  |<br>
+                               Praktan  |  No Name  |  Bhavartha Mauli  |<br>
+                               Yuva Sarkar  |  Mal mahu jiban mati  |<br>
+                               Broken By Desire To Be Heavenly Sent<br>
+                             </p></a>
+                           </div>
+                           <div class="footer7">
+                            <h4 style="font-size: 20px;">EXPLORE MUSIC GENRES
+                            </h4>
+                            <a class="aaa"  href="#"><p style="font-size: 13px;">
+                              
+                              Rock Songs  |<br>
+                              Patriotic songs  |  Sufi Music  |<br>
+                              Ghazals  |  Workout Music  |<br>
+                              Devotional Songs  |<br>
+                              Sad Songs  |  DJ Songs<br>
+                             </p></a>
+                           </div>
+                           <div class="footericon">
+                            <h4> ABOUT US | PRIVACY POLICY | TERM OF USE | CONTACT US  </h4>
+                           <div class="socialicon">
+                           <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
+                           <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                           <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                           <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+                           </div>
+                           </div>
+                        </footer>
+  
+</body>
+</html>
